@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="background-image">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,21 +11,39 @@
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
     <link rel="manifest" href="/site.webmanifest">
     <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pinyon+Script&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
     <meta name="msapplication-TileColor" content="#da532c">
     <meta name="theme-color" content="#ffffff">
 </head>
 <body>
-    <script src="js/include-html.js"></script>
+    <div class="body-flex-container">
+        <script src="js/include-html.js"></script>
+    
+        <div data-include-header></div>
+        <div data-include-nav></div>
 
-    <div data-include-header></div>
-    <div data-include-nav></div>
-
-    <main>
-        <section id="home">
-            <h2>Welcome to Our Local Business</h2>
-            <p>This is a simple introductory text about the business.</p>
-        </section>
-    </main>
-    <div data-include-footer></div>
+        <main>
+            <section id="home-images">
+                <div class="main-row">
+                    <div class="box-rounded"></div>
+                    <div class="box-rounded"></div>
+                    <div class="box-rounded"></div>
+                </div>
+            </section>
+            <section id="home-top">
+                <!-- <h2>Welcome to Our Local Business</h2> -->
+                <!-- <p>This is a simple introductory text about the business.</p> -->
+                <p>Handmade scented candles made with love to light up your life.</p>
+            </section>
+            <section id="home-bottom">
+                <p>All our candles are handmade in the UK, eco-friendly, and vegan friendly!</p>
+            </section>
+            <button class="styled-button">Shop now!</button>
+        </main>
+        <div data-include-footer></div>
+    </div>
 </body>
 </html>

@@ -1,12 +1,36 @@
 /* styles.css */
+
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    overflow-x: hidden; /* Prevent horizontal scrollbars */
+}
+
 body {
+    background-image: url('./assets/watercolour-background.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
+    display: flex; /* Use flexbox for vertical centering */
+    flex-direction: column;
+    justify-content: space-between; /* Vertically space content */
+    min-height: 100vh; /* Ensure body fills viewport height */
 }
 
+/* .body-flex-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+} */
+
 header {
-    background-color: white;
+    /* background-color: white; */
+    background-color: transparent;
     color: #444;
     padding: 1em 20px;
     display: flex;
@@ -24,18 +48,21 @@ header h1 {
 }
 
 nav {
-    background-color: white;
+    /* background-color: white; */
+    background-color: transparent;
     color: #444;
     text-align: center;
     /* border-top: 1px solid #444;
     border-bottom: 1px solid #444;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);*/
+    padding: 1em 0;
 }
 
 nav ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
+    gap: 20px;
 }
 
 nav ul li {
@@ -46,18 +73,93 @@ nav ul li {
 nav ul li a {
     color: #444;
     text-decoration: none;
+    padding: 10px 20px; /* Adjust padding for horizontal and vertical spacing */
 }
 
 main {
-    padding: 20px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    padding: 10px;
 }
 
+.main-row {
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 10px;
+}
+
+section {
+    padding: 10px;
+    border-radius: 8px;
+    width: 100%;
+    max-width: 400px;
+    margin-bottom: 10px;
+}
+
+#home-top {
+    font-family: "Pinyon Script", cursive;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 30px;
+}
+
+#home-bottom {
+    font-family: "Playfair Display", serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 20px;
+
+}
+
+/* .pinyon-script-regular {
+    font-family: "Pinyon Script", cursive;
+    font-weight: 400;
+    font-style: normal;
+  } */
+
+.styled-button {
+    background-color: #edcb8e; /* Green background */
+    border: none;             /* Remove border */
+    color: black;             /* White text */
+    padding: 15px 32px;       /* Some padding */
+    text-align: center;       /* Centered text */
+    text-decoration: none;    /* Remove underline */
+    display: inline-block;    /* Make the button an inline-block element */
+    font-size: 16px;          /* Increase font size */
+    margin: 4px 2px;          /* Some margin */
+    cursor: pointer;          /* Pointer/hand icon on hover */
+    border-radius: 8px;       /* Rounded corners */
+    transition: background-color 0.3s; /* Smooth transition for background color */
+}
+
+.styled-button:hover {
+    background-color: #f2d091; /* Darker green on hover */
+}
+
+
 footer {
-    background-color: #333;
-    color: white;
+    /* background-color: #333; */
+    background-color: transparent;
+    color: #444;
     text-align: center;
     padding: 1em 0;
     position: absolute;
     bottom: 0;
     width: 100%;
+}
+
+.box-rounded {
+    width: 100px;
+    height: 100px;
+    background-color: #edcb8e;
+    margin: 10px;
+    border-radius: 20px 20px 20px 20px;
+
 }
